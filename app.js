@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 
 var up = require('./routes/up');
 var crud = require('./routes/crud');
+var main = require('./routes/main');
 
 var app = express();
 
@@ -15,6 +16,6 @@ app.use(cookieParser());
 app.use(cors());
 
 app.use('/up', up);
-app.use('/api/v1/crud', crud);
+app.use('/main', main);
 
 module.exports = app;
